@@ -15,7 +15,7 @@ const App: FC = () => {
         <div className="App">
             <header className="App-header">
                 <button onClick={() => aFunction("Yousaf")}>click</button>
-                <Person name="Yousaf" age={19} isMarried={false} />
+                <Person name="Yousaf" age={19} />
             </header>
         </div>
     );

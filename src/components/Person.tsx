@@ -3,7 +3,7 @@ import * as React from "react";
 interface Props {
     name: string;
     age: number;
-    isMarried: boolean;
+    isMarried?: boolean;
 }
 
 const Person = (props: Props) => {
