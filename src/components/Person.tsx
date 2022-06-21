@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, ChangeEvent } from "react";
 
 interface Props {
     name: string;
@@ -14,6 +14,15 @@ const Person: FC<Props> = ({ name, age, isMarried }) => {
             <div>{name}</div>
             <div>{age}</div>
             <div>{isMarried ? "yes" : "No"}</div>
+            <input
+                type="text"
+                placeholder="Enter the country"
+                onChange={(e) => {
+                    setCountry(e.target.value);
+                }}
+                // This input is working fine here bcz event is handled inside input
+            />
+            {country}
         </div>
     );
 };
