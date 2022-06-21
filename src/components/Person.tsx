@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { FC } from "react";
 
 interface Props {
     name: string;
@@ -6,7 +6,7 @@ interface Props {
     isMarried?: boolean;
 }
 
-const Person = ({ name, age, isMarried }: Props) => {
+const Person: FC<Props> = ({ name, age, isMarried }) => {
     return (
         <div>
             <div>{name}</div>
