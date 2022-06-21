@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./App.css";
-import Person from "./components/Person";
+import Person, { HairColor } from "./components/Person";
 
 const App: FC = () => {
     const name: string = "Yousaf";
@@ -15,7 +15,7 @@ const App: FC = () => {
         <div className="App">
             <header className="App-header">
                 <button onClick={() => aFunction("Yousaf")}>click</button>
-                <Person name="Yousaf" age={19} />
+                <Person name="Yousaf" age={19} hairColor={HairColor.black} />
             </header>
         </div>
     );

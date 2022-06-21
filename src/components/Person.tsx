@@ -1,12 +1,18 @@
 import React, { FC, useState } from "react";
 
+export enum HairColor {
+    black = "Wow,black hair is nice",
+    white = "cool man, white hair",
+}
+
 interface Props {
     name: string;
     age: number;
     isMarried?: boolean;
+    hairColor: HairColor;
 }
 
-const Person: FC<Props> = ({ name, age, isMarried }) => {
+const Person: FC<Props> = ({ name, age, isMarried, hairColor }) => {
     const [country, setCountry] = useState<string | null>(null);
 
     const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +30,8 @@ const Person: FC<Props> = ({ name, age, isMarried }) => {
                 onChange={handleInput}
                 // This input is working fine here bcz event is handled inside input
             />
-            {country}
+            <div>{country}</div>
+            <div>{hairColor}</div>
         </div>
     );
 };
