@@ -6,7 +6,7 @@ interface Props {
     isMarried?: boolean;
 }
 
-const Person = ({name, age, isMarried} Props) => {
+const Person = ({ name, age, isMarried }: Props) => {
     return (
         <div>
             <div>{name}</div>
