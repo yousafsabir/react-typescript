@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Person: FC<Props> = ({ name, age, isMarried }) => {
-    const [country, setCountry] = useState<string>("");
+    const [country, setCountry] = useState<string | null>(null);
 
     return (
         <div>
