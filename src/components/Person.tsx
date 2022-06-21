@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 interface Props {
     name: string;
@@ -7,6 +7,8 @@ interface Props {
 }
 
 const Person: FC<Props> = ({ name, age, isMarried }) => {
+    const [country, setCountry] = useState<string>("");
+
     return (
         <div>
             <div>{name}</div>
