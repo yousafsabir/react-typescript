@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import "./App.css";
+import Person from "./components/Person";
 
 const App: FC = () => {
     const name: string = "Yousaf";
@@ -14,6 +15,7 @@ const App: FC = () => {
         <div className="App">
             <header className="App-header">
                 <button onClick={() => aFunction("Yousaf")}>click</button>
+                <Person name="Yousaf" age={19} isMarried={false} />
             </header>
         </div>
     );
