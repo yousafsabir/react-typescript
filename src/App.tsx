@@ -1,6 +1,7 @@
+import React, { FC } from "react";
 import "./App.css";
 
-function App() {
+const App: FC = () => {
     const name: string = "Yousaf";
     const age: number = 19;
     const isMarried: boolean = false;
@@ -16,6 +17,6 @@ function App() {
             </header>
         </div>
     );
-}
+};
 
 export default App;
