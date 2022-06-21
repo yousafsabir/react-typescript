@@ -1,4 +1,4 @@
-import React, { FC, useState, ChangeEvent } from "react";
+import React, { FC, useState } from "react";
 
 interface Props {
     name: string;
@@ -9,6 +9,10 @@ interface Props {
 const Person: FC<Props> = ({ name, age, isMarried }) => {
     const [country, setCountry] = useState<string | null>(null);
 
+    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCountry(e.target.value);
+    };
+
     return (
         <div>
             <div>{name}</div>
@@ -17,9 +21,7 @@ const Person: FC<Props> = ({ name, age, isMarried }) => {
             <input
                 type="text"
                 placeholder="Enter the country"
-                onChange={(e) => {
-                    setCountry(e.target.value);
-                }}
+                onChange={handleInput}
                 // This input is working fine here bcz event is handled inside input
             />
             {country}
