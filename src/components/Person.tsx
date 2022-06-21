@@ -6,12 +6,12 @@ interface Props {
     isMarried?: boolean;
 }
 
-const Person = (props: Props) => {
+const Person = ({name, age, isMarried} Props) => {
     return (
         <div>
-            <div>{props.name}</div>
-            <div>{props.age}</div>
-            <div>{props.isMarried ? "yes" : "No"}</div>
+            <div>{name}</div>
+            <div>{age}</div>
+            <div>{isMarried ? "yes" : "No"}</div>
         </div>
     );
 };
